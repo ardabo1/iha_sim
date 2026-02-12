@@ -81,7 +81,7 @@ Otopilot yazılımını başlatır ve İHA'yı kontrol eder:
 
 ```bash
 # ArduPilot dizininde (veya path'e ekli ise her yerden):
-sim_vehicle.py -v ArduPlane -f gazebo-minitalon --console --map
+sim_vehicle.py -v ArduPlane -f gazebo-minitalon --model JSON --console --map
 
 ```
 
