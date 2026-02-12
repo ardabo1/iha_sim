@@ -1,0 +1,13 @@
+material Gazebo/YunuseliZemin
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+	texture yunuseli_airport.jpg
+      }
+    }
+  }
+}

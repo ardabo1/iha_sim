@@ -1,0 +1,19 @@
+# --- ROS 2 Derleme Dosyaları (Sakın Yükleme!) ---
+build/
+install/
+log/
+.colcon/
+
+# --- Python Gereksizleri ---
+__pycache__/
+*.pyc
+
+# --- Editör/IDE Dosyaları (Gerek yok) ---
+.vscode/
+.idea/
+*.swp
+
+# --- ArduPilot Logları ---
+*.tlog
+*.rlog
+*.bin
