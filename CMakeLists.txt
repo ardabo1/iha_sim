@@ -12,6 +12,8 @@ install(DIRECTORY
   launch
   models
   worlds
+  config
+  scripts
   DESTINATION share/${PROJECT_NAME}
 )
 
