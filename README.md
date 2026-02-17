@@ -14,6 +14,14 @@ Bu projeyi çalıştırmadan önce sisteminizde aşağıdakilerin kurulu olması
 
 ## 🚀 Kurulum Adımları
 
+### Ön Adım
+Terminalı açın ve ROS 2 çalışma alanı klasörünü ve `src` alt klasörünü oluşturun:
+```bash
+mkdir -p ~/ros2_ws/src
+```
+
+
+
 ### 1. Projeyi Klonlayın
 Terminali açın ve ROS 2 çalışma alanınızın `src` klasörüne gidin:
 
@@ -37,11 +45,12 @@ source install/setup.bash
 
 ### 3. Gazebo Harmonic Ayarı (⚠️ ÇOK ÖNEMLİ)
 
-ROS 2 Humble, varsayılan olarak eski Gazebo sürümünü arar. Harmonic kullandığımızı sisteme tanıtmak için şu komutu **mutlaka** çalıştırın (bunu `.bashrc` dosyanıza eklemeniz önerilir):
+ROS 2 Humble, varsayılan olarak eski Gazebo sürümünü arar. Harmonic kullandığımızı sisteme tanıtmak için şu komutu **mutlaka** çalıştırın:
 
 ```bash
 export GZ_VERSION=harmonic
-
+# Bu sayeded bir daha Gazebo versiyonunu harmonic olarak atamanız gerekmeyecek
+echo "export GZ_VERSION=harmonic" >> .bashrc
 ```
 
 ### 4. ArduPilot Frame ve Ayar Kurulumu
@@ -49,10 +58,10 @@ export GZ_VERSION=harmonic
 Bu projede **özel bir İHA gövdesi (frame)** kullanılmaktadır. ArduPilot'un bu frame'i tanıması için hazırladığımız scripti çalıştırın:
 
 ```bash
-cd ~/ros2_ws/src/iha_sim
+cd ~/ros2_ws/src/iha_sim/scripts
 chmod +x setup_ardupilot_frame.sh
-./setup_ardupilot_frame.sh
-
+cd ~/ros2_ws/src/iha_sim/
+./scripts/setup_ardupilot_frame.sh
 ```
 
 *Bu işlem, gerekli parametre dosyalarını ve `vehicleinfo.py` dosyasını ArduPilot klasörünüze otomatik kopyalar.*
@@ -70,7 +79,6 @@ Dünyayı ve fizik motorunu başlatır:
 ```bash
 cd ~/ros2_ws
 source install/setup.bash
-export GZ_VERSION=harmonic
 ros2 launch iha_sim sim_start.launch.py
 
 ```
