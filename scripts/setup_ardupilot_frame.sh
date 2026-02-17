@@ -18,8 +18,8 @@ fi
 
 # 2. Frame dosyasını (parametreleri) kopyala
 # SITL parametrelerinin olduğu yer: Tools/autotest/default_params/
-echo "1. 'gazebo-minitalon' parametre dosyası kopyalanıyor..."
-cp config/gazebo-minitalon $ARDUPILOT_DIR/Tools/autotest/default_params/
+echo "1. 'gazebo-minitalon.parm' parametre dosyası kopyalanıyor..."
+cp config/gazebo-minitalon.parm $ARDUPILOT_DIR/Tools/autotest/default_params/
 
 # 3. vehicleinfo.py dosyasını güncelle
 # Bu dosya şurada durur: Tools/autotest/pysim/
@@ -38,4 +38,4 @@ cp config/vehicleinfo.py $DEST_INFO_PATH
 
 echo -e "${GREEN}--- Kurulum Başarıyla Tamamlandı! ---${NC}"
 echo "Artık şu komutla simülasyonu başlatabilirsiniz:"
-echo "sim_vehicle.py -v ArduPlane -f gazebo-minitalon --model JSON --add-param-file=$ARDUPILOT_DIR/Tools/autotest/default_params/gazebo-minitalon"
+echo "sim_vehicle.py -v ArduPlane -f gazebo-minitalon --model JSON --add-param-file=$ARDUPILOT_DIR/Tools/autotest/default_params/gazebo-minitalon.parm"
