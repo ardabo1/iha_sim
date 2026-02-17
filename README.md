@@ -19,7 +19,7 @@ Terminali açın ve ROS 2 çalışma alanınızın `src` klasörüne gidin:
 
 ```bash
 cd ~/ros2_ws/src
-git clone [https://github.com/ardabo1/uav-sim.git](https://github.com/ardabo1/uav-sim.git)
+git clone [https://github.com/ardabo1/iha_sim.git](https://github.com/ardabo1/iha_sim.git)
 
 ```
 
