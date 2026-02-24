@@ -6,7 +6,7 @@ from launch.substitutions import PathJoinSubstitution
 from launch_ros.actions import Node
 
 def generate_launch_description():
-    pkg_name = 'iha_sim'
+    pkg_name = 'uav_sim'
     pkg_share = get_package_share_directory(pkg_name)
 
     # 1. Gazebo Harmonic için Kaynak Yolları

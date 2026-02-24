@@ -1,4 +1,4 @@
-# --- ROS 2 Derleme Dosyaları (Sakın Yükleme!) ---
+# --- ROS 2 Derleme Dosyaları ---
 build/
 install/
 log/
@@ -8,7 +8,7 @@ log/
 __pycache__/
 *.pyc
 
-# --- Editör/IDE Dosyaları (Gerek yok) ---
+# --- Editör/IDE Dosyaları ---
 .vscode/
 .idea/
 *.swp
